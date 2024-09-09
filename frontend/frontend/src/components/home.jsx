@@ -4,6 +4,7 @@ function Home() {
   return (
     <>
     <div className='home'>
+      <h1>Weather Application</h1>
         
     </div>
 
