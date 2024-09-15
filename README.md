@@ -2,6 +2,25 @@
 <h1>Weather Application Task8</h1>
 <p>Using Api to fetch weather data for various locations </p>
 
+## Run Locally
+Clone the project
+```bash
+  https://github.com/Asanda001019/Task7.git
+```
+Go to the project directory
+```bash
+  cd Weather-App
+```
+Install dependencies
+```bash
+npm install 
+```
+Start the react server
+```bash
+npm run dev
+```
+## Tech Stack
+**Client:** React JS, HTML5, JavaScript, CSS3,API
 
 # React + Vite
 
