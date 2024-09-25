@@ -19,6 +19,10 @@ Start the react server
 ```bash
 npm run dev
 ```
+Start the json-server
+```bash
+npm run dev
+```
 ## Tech Stack
 **Client:** React JS, HTML5, JavaScript, CSS3,API
 
