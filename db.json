@@ -1,7 +1,12 @@
 {
-  "users":[
+  "users": [
     {
-
-  }
-]
+      "id": "d488"
+    },
+    {
+      "id": "20bf",
+      "email": "Portiaa949@gmail.com",
+      "password": "Asanda@123"
+    }
+  ]
 }

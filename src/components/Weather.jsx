@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './Weather.css';
 import search_icon from '../assets/search.png';
 import rain_icon from '../assets/rain.png';
 import storm_icon from '../assets/storm.png';
@@ -62,8 +61,7 @@ const Weather = () => {
       }
 
       const data = await response.json();
-
-      const icon = AllIcons[data.weather[0].icon] || sunny_icon; // Default to sunny_icon
+      const icon = AllIcons[data.weather[0].icon] || sunny_icon;
 
       setWeatherData({
         humidity: data.main.humidity,
@@ -91,43 +89,44 @@ const Weather = () => {
   }
 
   return (
-    <>
-      <div className='weather'>
-        <h3>Navigate Your Day with the Right Weather</h3>
-        <div className="search-bar">
-          <input ref={inputRef} type='text' placeholder='Search' />
-          <img src={search_icon} alt='Search' onClick={() => search(inputRef.current.value)} />
+    <div className="max-w-lg mx-auto flex flex-col items-center justify-center p-10 bg-gradient-to-r from-green-400 to-cyan-400 rounded-lg mb-12 mt-8">
+      <h3 className="text-white text-lg mb-8 underline">Navigate Your Day with the Right Weather</h3>
+      <div className="flex items-center gap-3 mb-6">
+        <input
+          ref={inputRef}
+          type="text"
+          placeholder="Search"
+          className="h-12 px-4 rounded-full border-none outline-none bg-cyan-400 text-black text-lg"
+        />
+        <img
+          src={search_icon}
+          alt="Search"
+          className="w-12 p-3 rounded-full bg-cyan-400 cursor-pointer"
+          onClick={() => search(inputRef.current.value)}
+        />
+      </div>
+
+      <img src={weatherData.icon} alt="Weather Icon" className="w-36 my-8" />
+      <p className="text-white text-7xl">{weatherData.temperature}°C</p>
+      <p className="text-white text-3xl">{weatherData.location}</p>
+      
+      <div className="flex justify-between w-full mt-10 text-white">
+        <div className="flex items-start gap-2">
+          <img src={humidity_icon} alt="Humidity" className="w-6 mt-2" />
+          <div>
+            <p className="text-2xl">{weatherData.humidity} %</p>
+            <span className="text-sm">Humidity</span>
+          </div>
         </div>
-
-        {weatherData && (
-          <>
-            <img src={weatherData.icon} alt='Weather Icon' className='weather-icon' />
-            <p className='temperature'>{weatherData.temperature}°C</p>
-            <p className='location'>{weatherData.location}</p>
-            <div className='weather-data'>
-              <div className='col'>
-                <img src={humidity_icon} alt="Humidity" />
-                <div>
-                  <p>{weatherData.humidity} %</p>
-                  <span>Humidity</span>
-                </div>
-              </div>
-              <div className='col'>
-                <img src={wind_icon} alt="Wind Speed" />
-                <div>
-                  <p>{weatherData.windSpeed} Km/h</p>
-                  <span>Wind Speed</span>
-                </div>
-              </div>
-            </div>
-          </>
-        )}
-
-        <div className='footer'>
-          <p>&copy; 2024 Asanda Madondo. Weather App. All rights reserved.</p>
+        <div className="flex items-start gap-2">
+          <img src={wind_icon} alt="Wind Speed" className="w-6 mt-2" />
+          <div>
+            <p className="text-2xl">{weatherData.windSpeed} Km/h</p>
+            <span className="text-sm">Wind Speed</span>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
