@@ -89,28 +89,28 @@ const Weather = () => {
   }
 
   return (
-    <div className="max-w-lg mx-auto flex flex-col items-center justify-center p-10 bg-gradient-to-r from-green-400 to-cyan-400 rounded-lg mb-12 mt-8">
-      <h3 className="text-white text-lg mb-8 underline">Navigate Your Day with the Right Weather</h3>
+    <div className="max-w-lg mx-auto flex flex-col items-center justify-center p-10 bg-blue-100 rounded-lg mb-12 mt-10">
+      <h3 className="text-blue-500 text-lg mb-8 underline">Navigate Your Day with the Right Weather</h3>
       <div className="flex items-center gap-3 mb-6">
         <input
           ref={inputRef}
           type="text"
           placeholder="Search"
-          className="h-12 px-4 rounded-full border-none outline-none bg-cyan-400 text-black text-lg"
+          className="h-12 px-4 rounded-full border-none outline-none bg-blue-200 text-black text-lg"
         />
         <img
           src={search_icon}
           alt="Search"
-          className="w-12 p-3 rounded-full bg-cyan-400 cursor-pointer"
+          className="w-12 p-3 rounded-full bg-blue-200 cursor-pointer"
           onClick={() => search(inputRef.current.value)}
         />
       </div>
 
       <img src={weatherData.icon} alt="Weather Icon" className="w-36 my-8" />
-      <p className="text-white text-7xl">{weatherData.temperature}°C</p>
-      <p className="text-white text-3xl">{weatherData.location}</p>
+      <p className="text-blue-500 text-7xl">{weatherData.temperature}°C</p>
+      <p className="text-blue-500 text-3xl">{weatherData.location}</p>
       
-      <div className="flex justify-between w-full mt-10 text-white">
+      <div className="flex justify-between w-full mt-10 text-blue-500">
         <div className="flex items-start gap-2">
           <img src={humidity_icon} alt="Humidity" className="w-6 mt-2" />
           <div>
