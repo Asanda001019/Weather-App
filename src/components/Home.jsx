@@ -23,12 +23,6 @@ const Home = () => {
 
       <a href="/Login" className="mt-10 bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition">Get Started</a>
       
-      {/* <div className="mt-10 p-4">
-        <h2 className="text-2xl font-bold underline">What Our Users Say</h2>
-        <blockquote className="italic text-gray-700">
-          "This app has completely changed how I plan my day!"
-        </blockquote>
-      </div> */}
     </div>
   );
 };

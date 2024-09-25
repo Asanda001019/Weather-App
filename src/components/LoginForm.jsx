@@ -1,7 +1,7 @@
-// src/LoginForm.js
+//LoginForm.js
 import React, { useState } from 'react';
 import { useAuth } from './AuthContext';
-import { useNavigate, Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { useNavigate, Link } from 'react-router-dom'; 
 
 const LoginForm = () => {
   const { login } = useAuth();

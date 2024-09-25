@@ -89,7 +89,7 @@ const Weather = () => {
   }
 
   return (
-    <div className="max-w-lg mx-auto flex flex-col items-center justify-center p-10 bg-blue-100 rounded-lg mb-12 mt-10">
+    <div className="max-w-lg mx-auto flex flex-col items-center justify-center p-10 bg-blue-300 rounded-lg mb-12 mt-10">
       <h3 className="text-blue-500 text-lg mb-8 underline">Navigate Your Day with the Right Weather</h3>
       <div className="flex items-center gap-3 mb-6">
         <input

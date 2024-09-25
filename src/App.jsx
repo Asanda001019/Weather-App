@@ -20,16 +20,12 @@ const App = () => {
           <Navbar />
           <main className="flex-grow">
             <Routes>
-              <Route path="/" element={<Home />} /> {/* Home route */}
-              
+              <Route path="/" element={<Home />} /> 
               <Route path="/Weather" element={<Weather />} />
-              
               <Route path="/login" element={<LoginForm />} />
               <Route path="/register" element={<RegisterForm />} />
             </Routes>
-          
           </main>
-          
           <Footer />
         </div>
       </Router>
