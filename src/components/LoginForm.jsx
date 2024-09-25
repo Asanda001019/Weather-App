@@ -1,4 +1,3 @@
-//LoginForm.js
 import React, { useState } from 'react';
 import { useAuth } from './AuthContext';
 import { useNavigate, Link } from 'react-router-dom'; 
@@ -7,6 +6,7 @@ const LoginForm = () => {
   const { login } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [message, setMessage] = useState(''); 
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -17,14 +17,22 @@ const LoginForm = () => {
 
     if (foundUser) {
       login(foundUser);
-      navigate('/Weather'); // Redirect to recipes page
+      setMessage('Successfully logged in!'); // Alert for successful login
+      setTimeout(() => {
+        navigate('/Weather'); // Redirect after a short delay
+      }, 1000); // Adjust delay as needed (1000 ms = 1 second)
     } else {
-      alert('Invalid credentials');
+      setMessage('Invalid credentials'); // Alert for invalid credentials
     }
   };
 
   return (
     <div className="max-w-md mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
+      {message && (
+        <div className="mb-4 p-2 text-center text-white bg-blue-500 rounded">
+          {message}
+        </div>
+      )}
       <form onSubmit={handleSubmit}>
         <h2 className="text-xl font-bold mb-4">Login</h2>
         <div className="mb-4">
