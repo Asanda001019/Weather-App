@@ -21,7 +21,8 @@ npm run dev
 ```
 Start the json-server
 ```bash
-npm run dev
+json-server --watch db.json
+
 ```
 ## Tech Stack
 **Client:** React JS, HTML5, JavaScript, CSS3,API
