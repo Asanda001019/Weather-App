@@ -9,7 +9,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Weather from './components/Weather';
 import Footer from "./components/Footer";
-import "./components/weather.css"
+import PrivacyPolicy from './components/PrivacyPolicy';
 
 const App = () => {
   return (
@@ -20,6 +20,7 @@ const App = () => {
           <Navbar />
           <main className="flex-grow">
             <Routes>
+            <Route path="/privacy" element={<PrivacyPolicy/>} />
               <Route path="/" element={<Home />} /> 
               <Route path="/Weather" element={<Weather />} />
               <Route path="/login" element={<LoginForm />} />
