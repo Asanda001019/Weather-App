@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
       <p className="mb-4">We implement security measures to protect your information.</p>
       
       <h2 className="text-2xl font-semibold mt-4">Your Rights</h2>
-      <p className="mb-4">You have the right to access, modify, or delete your personal data.</p>
+      <p className="mb-4">You have the right to access, modify, or delete your personal data anytime you want.</p> 
       <button
         onClick={handleBackToHome}
         className="mt-4 bg-blue-500 text-white px-4 py-2 rounded"
